@@ -1,0 +1,13 @@
+package com.example.fundRaisingApp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FundraisingAppApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FundraisingAppApplication.class, args);
+	}
+
+}

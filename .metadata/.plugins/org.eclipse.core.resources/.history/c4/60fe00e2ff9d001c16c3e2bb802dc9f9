@@ -1,0 +1,71 @@
+package com.example.fundRaisingApp.testService;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.fundRaisingApp.entity.DonorEntity;
+import com.example.fundRaisingApp.model.DonorModel;
+import com.example.fundRaisingApp.repository.DonorRepository;
+import com.example.fundRaisingApp.service.DonorServiceImpl;
+import com.example.fundRaisingApp.service.DonorServiceInterface;
+import com.example.fundRaisingApp.util.Conversions;
+
+@SpringBootTest
+public class TestFundraisingApp {
+	
+	
+	@InjectMocks
+	private DonorServiceInterface donorService=new DonorServiceImpl();
+	
+	@Mock
+	private DonorRepository donorRepository;
+	
+	/*@Test
+	public void testGetDonorDetailsByDonorId()
+	{
+		DonorModel donorModel=new DonorModel();
+		donorModel.setDonorName("swapnil");
+		donorModel.setDonorId(1);
+		donorModel.setDonorAddress("belgaum");
+		donorModel.setDonorNumber(9740124059l);
+		donorModel.setDonorEmail("swapnil@gmail.com");
+		donorModel.setUserId(5);
+		donorModel.setDonorAmount(5000);
+		
+		Optional<DonorEntity> optionalDonorEntity=Optional.of(DonorModel);
+		
+		
+	}*/
+	
+	@Test
+	public void testAddDonorAmount()
+	{
+		DonorModel donorModel =new DonorModel();
+		donorModel.setDonorName("swapnil");
+		donorModel.setDonorId(1);
+		donorModel.setDonorAddress("belgaum");
+		donorModel.setDonorNumber(9740124059l);
+		donorModel.setDonorEmail("swapnil@gmail.com");
+		donorModel.setUserId(5);
+		donorModel.setDonorAmount(5000);
+		
+		when(donorRepository.save(Conversions.modelToEntity(donorModel))).thenReturn(Conversions.modelToEntity(donorModel));
+		
+		DonorModel newDonor = new DonorModel();
+		
+		verify(donorRepository,times(1)).save(Conversions.modelToEntity(donorModel));
+		
+	}
+	
+	
+	
+}

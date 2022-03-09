@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestFundraisingApp" project="fundraisingApp" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.fundRaisingApp.testService.TestFundraisingApp" time="0.03" displayname="TestFundraisingApp" uniqueid="[engine:junit-jupiter]/[class:com.example.fundRaisingApp.testService.TestFundraisingApp]">
+    <testcase name="testAddDonorAmount" classname="com.example.fundRaisingApp.testService.TestFundraisingApp" time="0.03" displayname="testAddDonorAmount()" uniqueid="[engine:junit-jupiter]/[class:com.example.fundRaisingApp.testService.TestFundraisingApp]/[method:testAddDonorAmount()]"/>
+  </testsuite>
+</testrun>

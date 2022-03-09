@@ -1,0 +1,12 @@
+package com.example.fundRaisingApp.util;
+
+import com.example.fundRaisingApp.model.DonorModel;
+
+public class ConversionsDonorId {
+	
+	public static int entityToModelId(int DonorId)
+	{
+		
+	}
+
+}

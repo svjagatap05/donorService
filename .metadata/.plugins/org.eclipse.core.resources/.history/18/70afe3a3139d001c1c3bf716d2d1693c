@@ -1,0 +1,30 @@
+package com.example.fundRaisingApp.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.fundRaisingApp.model.DonorModel;
+import com.example.fundRaisingApp.service.DonorServiceInterface;
+
+@RestController
+public class DonorController {
+	
+	private DonorServiceInterface donorServiceInterface;
+	
+	
+	@PutMapping("/saveAmount")
+	
+	public ResponseEntity<DonorModel> saveDonorAmount(DonorModel donorModel)
+	{
+		DonorModel donorModelAddAmountController=donorServiceInterface.addDonorAmount(donorModel);
+		
+		ResponseEntity<DonorModel> responseEntityAddAmountController =new ResponseEntity<>(donorModelAddAmountController,HttpStatus.ACCEPTED);
+		return  responseEntityAddAmountController;
+	}
+	
+	
+	
+
+}

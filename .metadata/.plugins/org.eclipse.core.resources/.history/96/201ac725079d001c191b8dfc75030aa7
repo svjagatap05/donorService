@@ -1,0 +1,47 @@
+package com.example.fundRaisingApp.util;
+
+import com.example.fundRaisingApp.entity.DonorEntity;
+import com.example.fundRaisingApp.model.DonorModel;
+
+public class Conversions {
+
+	
+
+	
+	public DonorEntity modelToEntity(DonorModel donorModel)
+	{
+		
+		DonorEntity donorEntity=new DonorEntity();
+		
+		
+		donorEntity.setDonorName(donorModel.getDonorName());
+		donorEntity.setDonorEmail(donorModel.getDonorEmail());
+		donorEntity.setDonorAddress(donorModel.getDonorAddress());
+		donorEntity.setDonorNumber(donorModel.getDonorNumber());
+		donorEntity.setDonorAmount(donorModel.getDonorAmount());
+		
+		return donorEntity;
+		
+		
+	}
+	
+	public DonorModel entityToModel(DonorEntity donorEntity)
+	{
+		
+		DonorModel donorModel= new DonorModel();
+		
+		
+		donorModel.setDonorName(donorEntity.getDonorName());
+		donorModel.setDonorEmail(donorEntity.getDonorEmail());
+		donorModel.setDonorAddress(donorEntity.getDonorAddress());
+		donorModel.setDonorNumber(donorEntity.getDonorNumber());
+		donorModel.setDonorAmount(donorEntity.getDonorAmount());
+		
+		return donorModel;
+		
+		
+	}
+	
+	
+	
+}

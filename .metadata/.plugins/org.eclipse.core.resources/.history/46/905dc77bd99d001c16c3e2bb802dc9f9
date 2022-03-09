@@ -1,0 +1,24 @@
+package com.example.fundRaisingApp.model;
+
+public class AllDetailsModel {
+
+	private UserModel user;
+	private CategoryModel category;
+
+	public UserModel getUser() {
+		return user;
+	}
+
+	public void setUser(UserModel user) {
+		this.user = user;
+	}
+
+	public CategoryModel getCategory() {
+		return category;
+	}
+
+	public void setCategory(CategoryModel category) {
+		this.category = category;
+	}
+
+}

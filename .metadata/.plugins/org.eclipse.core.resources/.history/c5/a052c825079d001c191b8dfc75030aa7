@@ -1,0 +1,5 @@
+package com.example.fundRaisingApp.service;
+
+public class DonorServiceImpl {
+
+}

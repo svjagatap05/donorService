@@ -1,0 +1,26 @@
+package com.example.fundRaisingApp.testService;
+
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import com.example.fundRaisingApp.repository.DonorRepository;
+import com.example.fundRaisingApp.service.DonorServiceImpl;
+import com.example.fundRaisingApp.service.DonorServiceInterface;
+
+@RunWith(MockitoJUnitRunner.class)
+public class SaveMethodTest {
+	
+	
+	@Mock
+	private DonorRepository donorRepository;
+	
+	@InjectMocks
+	private DonorServiceInterface donorService=new DonorServiceImpl();
+	
+	Mockito.when(donorService.save(Mockito.any(DonorEntity.class))).thenReturn(DonorEntity);
+	
+	
+
+}

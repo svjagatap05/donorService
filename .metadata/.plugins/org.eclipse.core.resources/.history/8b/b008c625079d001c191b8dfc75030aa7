@@ -1,0 +1,5 @@
+package com.example.fundRaisingApp.repository;
+
+public interface DonorRepository {
+
+}

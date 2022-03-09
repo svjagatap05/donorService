@@ -1,0 +1,9 @@
+server.port=8080
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/swapnildb
+spring.datasource.username=swapnil
+spring.datasource.password=0504
+spring.jpa.hibernate.ddl-auto=update
+
+server.servlet.context-path=/donorspring
+spring.mvc.pathmatch.matching-strategy=ant-path-matcher

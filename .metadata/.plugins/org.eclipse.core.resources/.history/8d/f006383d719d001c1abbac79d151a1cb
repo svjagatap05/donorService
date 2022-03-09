@@ -1,0 +1,25 @@
+package com.example.fundRaisingApp.model;
+
+import org.apache.catalina.User;
+
+public class AllDetailsModel {
+
+	private User user;
+	private Categoty category;
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public Categoty getCategory() {
+		return category;
+	}
+	public void setCategory(Categoty category) {
+		this.category = category;
+	}
+	
+	
+	
+	
+}

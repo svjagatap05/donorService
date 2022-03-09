@@ -1,0 +1,49 @@
+package com.example.fundRaisingApp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.fundRaisingApp.model.DonorModel;
+import com.example.fundRaisingApp.repository.DonorRepository;
+
+@Service
+public class DonorServiceImpl implements DonorServiceInterface {
+
+	@Autowired
+	private DonorRepository donorRepository;
+	
+	@Override
+	public DonorModel addDonorAmount(DonorModel donorModel) {
+	
+			donorRepository.save(donorModel);
+		
+		return null;
+	}
+
+	@Override
+	public DonorModel getDonorDetailsByDonorId(int donorId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DonorModel updateDonorDetails(DonorModel donorModel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteDonorDetailsByDonorId(int donorId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public DonorModel getDonorDetailsByCatagoryName(String categoryName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}
